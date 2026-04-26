@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Henrique Pereira, Minecraft Bedrock developer focused on Script API, JavaScript/TypeScript logic, JSON systems, debugging and marketplace-ready gameplay features." />
+        content="Henrique Pereira, Minecraft Bedrock developer working with Script API, JavaScript, JSON systems, custom items, gameplay logic and bug fixing." />
     <title>Henrique Pereira | Minecraft Bedrock Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -418,6 +418,8 @@
         }
 
         .pack-icon img {
+            width: 100%;
+            max-width: 114px;
             image-rendering: pixelated;
         }
 
@@ -492,38 +494,9 @@
             text-transform: uppercase;
         }
 
-        .code-window {
-            min-height: 190px;
-            padding: 18px;
-            border: 1px solid var(--line-soft);
-            background: #0a0d11;
-            overflow: hidden;
-        }
-
-        .code-line {
-            display: flex;
-            gap: 18px;
-            color: var(--text-dim);
-            font-family: "JetBrains Mono", Consolas, monospace;
-            font-size: 0.76rem;
-            line-height: 1.85;
-            white-space: nowrap;
-        }
-
-        .code-line span:first-child {
-            min-width: 22px;
-            color: var(--text-muted);
-            text-align: right;
-        }
-
-        .code-line b {
-            color: var(--cyan);
-            font-weight: 700;
-        }
-
         .asset-strip {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
 
@@ -539,9 +512,43 @@
             background-size: 18px 18px;
         }
 
+        .asset-slot > div {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+
         .asset-slot img {
             width: 42px;
             image-rendering: pixelated;
+        }
+
+        .asset-slot .top-asset-wide {
+            width: 68px;
+        }
+
+        .asset-slot .top-asset-spaced {
+            margin-block: 6px 2px;
+        }
+
+        .asset-slot strong {
+            display: block;
+            color: var(--text);
+            font-size: 0.84rem;
+            line-height: 1.15;
+            text-align: center;
+        }
+
+        .asset-slot small {
+            display: block;
+            margin-top: 6px;
+            color: var(--text-muted);
+            font-family: "JetBrains Mono", Consolas, monospace;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            text-align: center;
         }
 
         .mini-pixel-icon {
@@ -702,6 +709,122 @@
         .system-card p {
             color: var(--text-dim);
             font-size: 0.95rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .highlight-card {
+            padding: 22px;
+            border: 1px solid var(--line-soft);
+            background: rgba(13, 16, 20, 0.38);
+        }
+
+        .highlight-visual {
+            min-height: 168px;
+            margin-bottom: 18px;
+            padding: 18px;
+            border: 1px solid var(--line-soft);
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                #111820;
+            background-size: 22px 22px;
+            display: grid;
+            align-content: center;
+            justify-items: start;
+            gap: 14px;
+        }
+
+        .highlight-media {
+            margin-bottom: 18px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .highlight-media.two-up {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .highlight-shot {
+            width: 100%;
+            height: 220px;
+            display: block;
+            border: 1px solid var(--line-soft);
+            background: #0a0d11;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .highlight-shot.contain {
+            object-fit: contain;
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                #111820;
+            background-size: 22px 22px;
+        }
+
+        .highlight-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .highlight-icons img {
+            width: 40px;
+            image-rendering: pixelated;
+        }
+
+        .highlight-visual strong {
+            font-size: 1.05rem;
+            line-height: 1.2;
+        }
+
+        .highlight-visual small {
+            color: var(--text-muted);
+            font-family: "JetBrains Mono", Consolas, monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+        }
+
+        .highlight-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.22rem;
+        }
+
+        .highlight-card p {
+            color: var(--text-dim);
+            font-size: 0.97rem;
+        }
+
+        .flow-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 16px;
+            list-style: none;
+        }
+
+        .flow-list li {
+            position: relative;
+            padding-left: 18px;
+            color: var(--text-dim);
+            font-size: 0.93rem;
+        }
+
+        .flow-list li::before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            box-shadow: -2px 0 0 rgba(245, 193, 92, 0.35);
         }
 
         .work-grid {
@@ -954,8 +1077,17 @@
             }
 
             .work-grid,
-            .skills-layout {
+            .skills-layout,
+            .highlight-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .highlight-media.two-up {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-shot {
+                height: 200px;
             }
         }
 
@@ -1033,23 +1165,6 @@
                 overflow-wrap: anywhere;
             }
 
-            .code-window {
-                padding: 12px;
-                overflow-x: auto;
-            }
-
-            .code-line {
-                gap: 8px;
-                font-size: 0.68rem;
-                line-height: 1.65;
-                white-space: normal;
-            }
-
-            .code-line code {
-                min-width: 0;
-                overflow-wrap: anywhere;
-            }
-
             .btn {
                 min-height: 44px;
                 padding: 10px 9px;
@@ -1103,15 +1218,15 @@
                     <div class="eyebrow reveal">Script API / JSON / Gameplay Systems</div>
                     <h1 class="reveal">Minecraft Bedrock <span>Developer</span></h1>
                     <p class="hero-copy reveal">
-                        I build and maintain Bedrock gameplay systems with <strong>JavaScript, TypeScript,
-                            @minecraft/server and JSON configuration</strong>. My strength is finding broken logic,
-                        debugging complex behavior and turning creative ideas into stable in-game features.
+                        I work on Bedrock gameplay systems with <strong>JavaScript, TypeScript,
+                            @minecraft/server and JSON configuration</strong>. Most of my work is fixing broken logic,
+                        implementing features and making custom gameplay feel stable in-game.
                     </p>
                     <div class="hero-meta reveal">
-                        <span class="meta-chip">3+ years in production</span>
+                        <span class="meta-chip">Script API focused</span>
                         <span class="meta-chip">Portuguese native</span>
                         <span class="meta-chip">English intermediate</span>
-                        <span class="meta-chip">Confidential Bedrock work</span>
+                        <span class="meta-chip">Private commercial project</span>
                     </div>
                     <div class="actions reveal">
                         <a class="btn primary" href="mailto:henriquevpsantos@hotmail.com">Get in touch</a>
@@ -1121,59 +1236,38 @@
                     </div>
                 </div>
 
-                <aside class="hero-console pixel-corners reveal" aria-label="Private Bedrock project preview">
+                <aside class="hero-console pixel-corners reveal" aria-label="Draconian Bedrock project preview">
                     <div class="console-top">
-                        <span><span class="status-dot"></span> BEDROCK_BP / private build</span>
+                        <span><span class="status-dot"></span> DRACONIAN_BP / production pack</span>
                         <span>@minecraft/server 2.0.0</span>
                     </div>
                     <div class="pack-preview">
                         <div class="pack-icon">
-                            <div class="generic-pack-art" aria-hidden="true">
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-                            </div>
+                            <img src="assets/draconian-bp-pack-icon.png" alt="Draconian behavior pack icon">
                         </div>
                         <div class="pack-title">
-                            <h2>Private Bedrock Project</h2>
-                            <p>Gameplay scripting, bug fixing and feature work for a late-stage commercial Bedrock build.</p>
+                            <h2>Draconian Project</h2>
+                            <p>Late-stage commercial Bedrock add-on with custom dragons, progression systems, combat,
+                                quests and guided player flow.</p>
                         </div>
                     </div>
                     <div class="stat-grid" aria-label="Project file overview">
-                        <div class="stat"><strong>API</strong><span>script work</span></div>
-                        <div class="stat"><strong>JSON</strong><span>pack config</span></div>
-                        <div class="stat"><strong>QA</strong><span>bug fixing</span></div>
-                    </div>
-                    <div class="code-window" aria-label="Code sample summary">
-                        <div class="code-line">
-                            <span>01</span><code>import { system, world } from <b>"@minecraft/server"</b>;</code>
-                        </div>
-                        <div class="code-line"><span>02</span><code>subscribe(playerJoin, firstJoinFlow);</code></div>
-                        <div class="code-line">
-                            <span>03</span><code>syncEntityState(<b>lore</b>, particles, sounds);</code>
-                        </div>
-                        <div class="code-line"><span>04</span><code>repairGameplayBugs(entityState, cooldowns);</code>
-                        </div>
-                        <div class="code-line"><span>05</span><code>shipWhenStable(teamQA, launchChecklist);</code>
-                        </div>
+                        <div class="stat"><strong>Scripted gameplay</strong><span>and custom items</span></div>
+                        <div class="stat"><strong>Shops and</strong><span>progression</span></div>
+                        <div class="stat"><strong>UI and</strong><span>VFX</span></div>
                     </div>
                     <div class="asset-strip" aria-label="Selected project assets">
-                        <div class="asset-slot"><span class="mini-pixel-icon"
-                                aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+                        <div class="asset-slot">
+                            <div>
+                                <img class="top-asset-wide" src="assets/dragon_menu.png" alt="Dragon shop preview">
+                                <small>Dragon shop</small>
+                            </div>
                         </div>
-                        <div class="asset-slot"><span class="mini-pixel-icon"
-                                aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
-                        </div>
-                        <div class="asset-slot"><span class="mini-pixel-icon"
-                                aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
-                        </div>
-                        <div class="asset-slot"><span class="mini-pixel-icon"
-                                aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+                        <div class="asset-slot">
+                            <div>
+                                <img src="assets/wind-chestplate-icon.png" alt="Armor icon">
+                                <small>Armor set</small>
+                            </div>
                         </div>
                     </div>
                 </aside>
@@ -1184,7 +1278,8 @@
             <div class="container about-grid">
                 <div>
                     <div class="eyebrow section-kicker reveal">About me</div>
-                    <h2 class="section-title reveal">I like turning messy systems into something stable and playable.</h2>
+                    <h2 class="section-title reveal">I like taking messy systems and making them feel solid in-game.
+                    </h2>
                     <div class="quick-facts reveal">
                         <div class="fact"><span>Role</span><strong>Script Developer</strong></div>
                         <div class="fact"><span>Stack</span><strong>JavaScript / TypeScript / JSON</strong></div>
@@ -1193,15 +1288,14 @@
                 </div>
                 <div class="about-text reveal">
                     <p>
-                        I like understanding how a system works, finding where it breaks and refactoring it until it
-                        behaves reliably. I also bring more than three years of production JavaScript and TypeScript experience from web
-                        systems, which helps me read, maintain and stabilize Bedrock codebases faster.
+                        I like figuring out how a system works, where it breaks and what it needs to behave
+                        consistently. I also come from production JavaScript and TypeScript work on the web, which
+                        helps a lot when I need to read, maintain and clean up larger Bedrock codebases.
                     </p>
                     <p>
                         In Minecraft Bedrock, I work with <strong>Script API, entity behavior files, resource packs,
                             UI assets and gameplay configuration</strong>. I also use <strong>Regolith
-                            generators</strong> for pack automation and AI-assisted development for API research,
-                        debugging ideas and edge-case review while keeping responsibility for the final code.
+                            generators</strong> for pack automation and general workflow improvements.
                     </p>
                 </div>
             </div>
@@ -1210,38 +1304,39 @@
         <section id="project" class="project">
             <div class="container">
                 <div class="eyebrow section-kicker reveal">Current project</div>
-                <h2 class="section-title reveal">Private Bedrock project, late-stage production.</h2>
+                <h2 class="section-title reveal">Draconian: private commercial Bedrock add-on in late-stage production.
+                </h2>
                 <p class="section-copy reveal">
-                    I am keeping this intentionally high-level until the owner confirms what can be shown publicly.
-                    My role centers on Bedrock scripting, bug fixing and feature implementation inside
-                    an existing behavior/resource pack codebase.
+                    The client approved including the project in my portfolio, so I can reference the pack directly
+                    while still keeping some unreleased details private. My work on it is mostly Bedrock scripting,
+                    bug fixing and feature work across both behavior and resource packs.
                 </p>
 
                 <div class="project-shell">
                     <article class="project-panel pixel-corners reveal">
                         <h3>What I contributed</h3>
                         <p>
-                            I joined an existing codebase and worked on targeted fixes and gameplay features.
-                            This portfolio keeps unreleased names, visuals and exact mechanics private
-                            until the project owner approves them.
+                            I joined an existing production add-on and worked on Bedrock scripting, custom items,
+                            gameplay systems and the resource-pack side that supports them.
                         </p>
                         <div class="tag-row">
                             <span class="tag">Script API</span>
                             <span class="tag">JavaScript</span>
+                            <span class="tag">Behavior pack</span>
                             <span class="tag">Entity logic</span>
+                            <span class="tag">Custom items</span>
+                            <span class="tag">Shop systems</span>
                             <span class="tag">Resource pack</span>
+                            <span class="tag">Custom UI / VFX</span>
                             <span class="tag">QA fixes</span>
-                            <span class="tag">Public media pending approval</span>
                         </div>
                         <ul class="deliverables">
-                            <li>Diagnosed and fixed logic errors that were causing gameplay bugs.</li>
-                            <li>Implemented item lore and interaction systems for custom gameplay content.</li>
-                            <li>Worked on entity interactions, effects, projectiles, sounds, HUD elements and state
-                                handling.</li>
-                            <li>Maintained quest flow, reward handling, cutscene events, progression systems and player
-                                guidance.</li>
-                            <li>Collaborated with the team to prepare the build for launch while keeping project details
-                                confidential.</li>
+                            <li>Fixed gameplay problems in combat, progression and interaction systems that were already in the pack.</li>
+                            <li>Implemented custom item behavior, lore updates and dragon support features.</li>
+                            <li>Worked on mounted dragon combat, projectile logic, status effects and feedback.</li>
+                            <li>Maintained shop flows for dragon purchases and equipment or armor interactions.</li>
+                            <li>Worked on quests, guided sequences, rewards, onboarding and destination tracking.</li>
+                            <li>Helped get the project into a more stable state for launch.</li>
                         </ul>
                     </article>
 
@@ -1249,58 +1344,138 @@
                         <article class="system-card">
                             <div class="icon">01</div>
                             <h4>Entity and combat systems</h4>
-                            <p>State changes, interactions, particles, cooldowns, damage effects and combat logic.</p>
+                            <p>Mounted dragon combat, special attacks, cooldowns, healing, knockback and area damage
+                                logic.</p>
                         </article>
                         <article class="system-card">
                             <div class="icon">02</div>
-                            <h4>Items and progression</h4>
-                            <p>Item lore, custom item rules, effect timing and progression-linked interaction mechanics.
+                            <h4>Custom items, shops and progression</h4>
+                            <p>Custom items, lore syncing, coin-based shop flows, dragon consumables and progression-linked
+                                interactions.
                             </p>
                         </article>
                         <article class="system-card">
                             <div class="icon">03</div>
-                            <h4>Quest flow and rewards</h4>
-                            <p>Dialogue-driven progression, delivery objectives, reward handling and event-based quest
-                                logic.</p>
+                            <h4>Quest flow and guidance</h4>
+                            <p>Dialogue hooks, guide UI, general map tracking, delivery objectives and reward flow
+                                across multiple destinations.</p>
                         </article>
                         <article class="system-card">
                             <div class="icon">04</div>
                             <h4>Cutscenes and player flow</h4>
-                            <p>Camera moments, guided transitions, first-join sequences and staged gameplay events.</p>
+                            <p>Camera sequences, first-join onboarding, cave guidance scenes and staged event
+                                transitions.</p>
                         </article>
                         <article class="system-card">
                             <div class="icon">05</div>
-                            <h4>Wave arena systems</h4>
-                            <p>Stage-based combat encounters with controlled enemy waves and progression pacing.</p>
-                        </article>
-                        <article class="system-card">
-                            <div class="icon">06</div>
-                            <h4>Mounts, guidance and UI</h4>
-                            <p>Feed-based mount progression, GPS-style navigation, boss bars, progression bars and
-                                stylized hotbar UI.</p>
+                            <h4>Arena and resource pack integration</h4>
+                            <p>15-wave arena flow supported by custom textures, UI files, animation controllers and
+                                VFX aligned with gameplay scripting.</p>
                         </article>
                     </div>
+                </div>
+
+                <div class="eyebrow section-kicker reveal" style="margin-top: 44px;">Gameplay highlights</div>
+                <p class="section-copy reveal">
+                    These are the parts of the project that show the work most clearly: buying, learning, navigating,
+                    gearing up and moving through the world.
+                </p>
+
+                <div class="highlight-grid reveal">
+                    <article class="highlight-card pixel-corners">
+                        <div class="highlight-media">
+                            <img class="highlight-shot contain" src="assets/dragon_menu.png"
+                                alt="Dragon shop entity and purchase setup">
+                        </div>
+                        <h3>Dragon commerce</h3>
+                        <p>
+                            Dragons are bought directly from an in-world entity shop using coins, with the full flow
+                            handled inside the add-on.
+                        </p>
+                        <ul class="flow-list">
+                            <li>The shop uses an entity interaction instead of a regular NPC trade window.</li>
+                            <li>Coin cost is shown in-world and tied to the selected dragon.</li>
+                            <li>Successful purchases grant the matching dragon egg.</li>
+                        </ul>
+                    </article>
+
+                    <article class="highlight-card pixel-corners">
+                        <div class="highlight-media">
+                            <img class="highlight-shot contain" src="assets/armor.png"
+                                alt="Custom armor set and thunder sword in gameplay">
+                        </div>
+                        <h3>Gear and combat loadouts</h3>
+                        <p>
+                            The project includes custom weapons, armor sets and support items tied to combat and
+                            progression.
+                        </p>
+                        <ul class="flow-list">
+                            <li>Custom swords and bows connect directly to scripted combat behavior.</li>
+                            <li>Armor sets matter as gameplay, not just as visuals.</li>
+                            <li>The item art keeps the add-on readable while still giving it its own style.</li>
+                        </ul>
+                    </article>
+
+                    <article class="highlight-card pixel-corners">
+                        <div class="highlight-media two-up">
+                            <img class="highlight-shot contain" src="assets/dragon_guide.png"
+                                alt="Dragon guide main menu">
+                            <img class="highlight-shot contain" src="assets/dragon_guide2.png"
+                                alt="Dragon guide potions menu">
+                            <img class="highlight-shot contain" src="assets/trader.png"
+                                alt="NPC merchant potion trade screen">
+                            <img class="highlight-shot contain" src="assets/potion.png"
+                                alt="Potion tooltip showing effect description">
+                        </div>
+                        <h3>Guides, potions and NPC shops</h3>
+                        <p>
+                            The Dragon Guide helps explain mechanics, consumables, cosmetics and healing, and potions
+                            can also be bought through an NPC merchant flow.
+                        </p>
+                        <ul class="flow-list">
+                            <li>The guide explains dragon mechanics, potions, cosmetics and bandages.</li>
+                            <li>The potion pages make heavier systems easier to learn in-game.</li>
+                            <li>The NPC merchant gives the project a second type of shop flow besides the dragon store.</li>
+                        </ul>
+                    </article>
+
+                    <article class="highlight-card pixel-corners">
+                        <div class="highlight-media two-up">
+                            <img class="highlight-shot contain" src="assets/gps.png"
+                                alt="General Map destination selection menu">
+                            <img class="highlight-shot contain" src="assets/gps_location.png"
+                                alt="Actionbar guidance pointing to Dragon Shop">
+                        </div>
+                        <h3>GPS and player direction</h3>
+                        <p>
+                            Players can choose destinations through the General Map, follow actionbar guidance while
+                            traveling and get confirmation when they arrive.
+                        </p>
+                        <ul class="flow-list">
+                            <li>Trackable destinations include shops, quests, the arena and other key locations.</li>
+                            <li>The system connects menu selection to actual movement through the world.</li>
+                            <li>Arrival feedback makes the navigation loop feel complete.</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="work">
             <div class="container">
-                <div class="eyebrow section-kicker reveal">Selected work</div>
-                <h2 class="section-title reveal">Minecraft prototypes and production background.</h2>
+                <div class="eyebrow section-kicker reveal">Additional work</div>
+                <h2 class="section-title reveal">Other experience that supports the Bedrock work.</h2>
                 <p class="section-copy reveal">
-                    Minecraft remains the focus. The web work below is separate from Minecraft and is included only as
-                    proof of production JavaScript/TypeScript experience, debugging discipline and real deployment
-                    responsibility.
+                    Minecraft is the main focus here. The work below is just supporting background for the way I work
+                    with JavaScript, UI and production maintenance.
                 </p>
 
                 <div class="work-grid">
                     <article class="work-panel pixel-corners reveal">
                         <h3>Bedrock UI prototypes</h3>
                         <p>
-                            During a studio technical trial, I built a dynamic loading screen concept with a progress
-                            bar tied to world loading percentage and an animated spritesheet character moving along the
-                            bar. I also explored speedrun challenge UI and a styled inventory chest layout.
+                            During a studio technical trial, I built a loading screen concept with a progress bar tied
+                            to world loading percentage, plus some UI experiments around challenge and inventory flows.
                         </p>
                         <div class="tag-row">
                             <span class="tag">HUD/UI</span>
@@ -1335,10 +1510,8 @@
                     <article class="work-panel pixel-corners reveal">
                         <h3>Production background</h3>
                         <p>
-                            Outside Minecraft, I work on production web systems and interfaces. That includes frontend
-                            work at Canta / Cantacom for large platforms such as Smiles (Group GOL), plus separate
-                            projects like PedidoQR and Mota Locacoes built with React, Next.js, Node.js, PostgreSQL
-                            and Linux/VPS deployment.
+                            Outside Minecraft, I also work on production web systems and interfaces. That experience
+                            helps with debugging, delivery rhythm and long-term maintenance.
                         </p>
                         <div class="tag-row">
                             <span class="tag">JavaScript / TypeScript</span>
@@ -1363,8 +1536,8 @@
                 <div class="eyebrow section-kicker reveal">Toolkit</div>
                 <h2 class="section-title reveal">What I can help with.</h2>
                 <p class="section-copy reveal">
-                    I am strongest where scripting, JSON configuration and practical debugging meet. I can help a team
-                    unblock bugs, polish features and keep the build moving.
+                    I work best where scripting, JSON configuration and practical debugging meet. I like fixing
+                    problems, finishing features and keeping things moving.
                 </p>
 
                 <div class="skills-layout">
@@ -1391,7 +1564,6 @@
                             <span class="pill strong">Regolith generator development</span>
                             <span class="pill">Production JavaScript/TypeScript</span>
                             <span class="pill">Git / version control</span>
-                            <span class="pill">AI-assisted development</span>
                             <span class="pill">Pack automation</span>
                             <span class="pill">Deployment and maintenance</span>
                             <span class="pill">Technical English</span>
@@ -1407,10 +1579,10 @@
                 <div class="contact-panel pixel-corners reveal">
                     <div>
                         <div class="eyebrow">Let's talk</div>
-                        <h2>Ready to help ship your next Minecraft Bedrock project.</h2>
+                        <h2>Available for Minecraft Bedrock scripting and gameplay work.</h2>
                         <p>
                             Available for scripting, gameplay systems, bug fixing, feature implementation and
-                            behavior/resource pack maintenance.
+                            behavior or resource pack maintenance.
                         </p>
                     </div>
                     <div class="contact-actions">
@@ -1428,7 +1600,7 @@
 
     <footer>
         <div class="container footer-inner">
-            <span>Copyright 2026 Henrique Pereira. Built block by block.</span>
+            <span>Copyright 2026 Henrique Pereira.</span>
             <span>Minecraft Bedrock Developer Portfolio</span>
         </div>
     </footer>
