@@ -512,7 +512,7 @@
             background-size: 18px 18px;
         }
 
-        .asset-slot > div {
+        .asset-slot>div {
             display: grid;
             justify-items: center;
             align-items: center;
@@ -1203,7 +1203,8 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#project">Project</a></li>
+                <li><a href="#project">Draconian</a></li>
+                <li><a href="#battle-challenges">Battle Challenges</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a class="nav-cta" href="#contact">Contact</a></li>
@@ -1230,8 +1231,8 @@
                     </div>
                     <div class="actions reveal">
                         <a class="btn primary" href="mailto:henriquevpsantos@hotmail.com">Get in touch</a>
-                        <a class="btn" href="https://www.linkedin.com/in/henriquee-pereira/" target="_blank"
-                            rel="noreferrer">LinkedIn</a>
+                        <a class="btn" href="https://www.youtube.com/watch?v=vY8SxngpYD4" target="_blank"
+                            rel="noreferrer">Watch Gameplay</a>
                         <a class="btn" href="#project">View project</a>
                     </div>
                 </div>
@@ -1331,7 +1332,8 @@
                             <span class="tag">QA fixes</span>
                         </div>
                         <ul class="deliverables">
-                            <li>Fixed gameplay problems in combat, progression and interaction systems that were already in the pack.</li>
+                            <li>Fixed gameplay problems in combat, progression and interaction systems that were already
+                                in the pack.</li>
                             <li>Implemented custom item behavior, lore updates and dragon support features.</li>
                             <li>Worked on mounted dragon combat, projectile logic, status effects and feedback.</li>
                             <li>Maintained shop flows for dragon purchases and equipment or armor interactions.</li>
@@ -1350,7 +1352,8 @@
                         <article class="system-card">
                             <div class="icon">02</div>
                             <h4>Custom items, shops and progression</h4>
-                            <p>Custom items, lore syncing, coin-based shop flows, dragon consumables and progression-linked
+                            <p>Custom items, lore syncing, coin-based shop flows, dragon consumables and
+                                progression-linked
                                 interactions.
                             </p>
                         </article>
@@ -1435,7 +1438,8 @@
                         <ul class="flow-list">
                             <li>The guide explains dragon mechanics, potions, cosmetics and bandages.</li>
                             <li>The potion pages make heavier systems easier to learn in-game.</li>
-                            <li>The NPC merchant gives the project a second type of shop flow besides the dragon store.</li>
+                            <li>The NPC merchant gives the project a second type of shop flow besides the dragon store.
+                            </li>
                         </ul>
                     </article>
 
@@ -1457,6 +1461,63 @@
                             <li>Arrival feedback makes the navigation loop feel complete.</li>
                         </ul>
                     </article>
+                </div>
+
+                <div class="eyebrow section-kicker reveal" style="margin-top: 44px;">Video Demonstration</div>
+                <div class="pixel-corners reveal"
+                    style="margin-top: 20px; max-width: 800px; overflow: hidden; background: #000; aspect-ratio: 16/9; border-color: rgba(87, 200, 255, 0.3);">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vY8SxngpYD4"
+                        title="Draconian Gameplay Demo" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="battle-challenges" class="project"
+            style="background: linear-gradient(180deg, transparent 0%, rgba(245, 193, 92, 0.015) 50%, transparent 100%); border-top: 1px solid var(--line-soft);">
+            <div class="container">
+                <div class="eyebrow section-kicker reveal">Experimental System</div>
+                <h2 class="section-title reveal">Battle Challenges: Custom JSON UI & Data-driven mechanics.</h2>
+                <p class="section-copy reveal">
+                    I built this experimental system to push the limits of Bedrock's JSON UI. My goal was to create a 
+                    custom interface that felt completely unique, breaking away from the standard vanilla look 
+                    while maintaining a tight integration with the Script API.
+                </p>
+
+                <div class="project-shell">
+                    <article class="project-panel pixel-corners reveal">
+                        <h3>Custom UI & Workflow</h3>
+                        <p>
+                            This project was a deep dive into custom component design and automation, from the pixel art to the TSX generators.
+                        </p>
+                        <div class="tag-row">
+                            <span class="tag">JSON UI</span>
+                            <span class="tag">Handmade Assets</span>
+                            <span class="tag">Regolith Generators</span>
+                            <span class="tag">Data-driven</span>
+                            <span class="tag">Script API</span>
+                            <span class="tag">Pixel Art</span>
+                        </div>
+                        <ul class="deliverables">
+                            <li><strong>HUD Integration</strong>: I modified the vanilla <code>hud_screen</code> to support live objective tracking, giving players immediate feedback on their progress without opening a menu.</li>
+                            <li><strong>Handmade Assets</strong>: I designed every button and frame from scratch, ensuring the pixel art style stayed consistent across the entire custom interface.</li>
+                            <li><strong>Regolith Automation</strong>: Using generators, I built a data-driven pipeline that makes adding new challenges as simple as editing a config file.</li>
+                            <li><strong>Experimental Logic</strong>: A prototype for complex challenge tracking and achievement rewards built as a technical exercise.</li>
+                        </ul>
+                    </article>
+
+                    <div class="highlight-grid reveal">
+                        <article class="highlight-card pixel-corners"
+                            style="grid-column: span 2; padding: 0; overflow: hidden; background: #0a0d11; border-color: rgba(245, 193, 92, 0.3);">
+                            <div class="highlight-media">
+                                <img src="assets/demo.gif" alt="Battle Challenges Animation"
+                                    style="width: 100%; height: auto; display: block; border-bottom: 1px solid rgba(245, 193, 92, 0.2);">
+                                <img src="assets/hud_preview.png" alt="Real-time HUD - Mission Progress"
+                                    style="width: 100%; height: auto; display: block;">
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1553,6 +1614,7 @@
                             <span class="pill">Resource packs</span>
                             <span class="pill">Custom items</span>
                             <span class="pill">UI/HUD concepts</span>
+                            <span class="pill">TypeScript UI Development</span>
                         </div>
                     </article>
 
